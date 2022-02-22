@@ -18,42 +18,42 @@
                         <div class="form-group">
                             
                             <label for="">Nome:</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" [(ngModel)]="user.nome" name="nome">
 
                         </div>
                        
                         <div class="form-group">
 
                             <label for="">Usuário (email):</label>
-                            <input type="email" class="form-control">
+                            <input type="email" class="form-control" [(ngModel)]="user.email" name="email">
 
                         </div>
 
                         <div class="form-group">
 
                             <label for="">Link da foto:</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" [(ngModel)]="user.foto">
 
                         </div>
 
                         <div class="form-group">
 
                             <label for="">Senha:</label>
-                            <input type="password" class="form-control">
+                            <input (input)="confirmPassword($event)" type="password" class="form-control">
 
                         </div>
 
                         <div class="form-group">
 
                             <label for="">Confirmar senha:</label>
-                            <input type="password" class="form-control">
+                            <input type="password" class="form-control" name="senha" [(ngModel)]="user.senha">
 
                         </div>
 
                         <div class="form-group">
 
                             <label for="">Tipo de usuário:</label>
-                            <select name="tipo" id="tipo" class="form-control">
+                            <select name="tipo" id="tipo" class="form-control" (change)="userType($event)">
 
                                 <option value="">Selecione um tipo de usuário:</option>
                                 <option value="">Padrão</option>
@@ -66,7 +66,7 @@
                         <div class="w-50 mx-auto mt-4 d-flex justify-content-around">
 
                             <button class="btn btn-outline-danger">Cancelar</button>
-                            <button class="btn btn-outline-success">Cadastrar</button>
+                            <button class="btn btn-outline-success" (click)="signIn()">Cadastrar </button>
 
                         </div>
                         
