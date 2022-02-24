@@ -6,17 +6,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto d-flex align-items-center">
           <li class="nav-item active">
-            <img src="https://github.com/Gstv-web.png" class="imgPerfil">
+            <img src="{{foto}}" class="imgPerfil">
           </li>
           <li class="nav-item">
-            <p class="text-light m-0 ml-3">Bem vindo, Gustavo Oliveira!</p>
+            <p class="text-light m-0 ml-3">Olá, {{nome}}!</p>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light"><i class="fa fa-pencil" aria-hidden="true"></i></a>
           </li>
         </ul>
         <div class="text-light">
-          <a class="nav-link text-light"><span>Sair</span><i class="fa fa-sign-out ml-2" aria-hidden="true"></i></a>
+          <a (click)="sair()" class="nav-link text-light"><span>Sair</span><i class="fa fa-sign-out ml-2" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

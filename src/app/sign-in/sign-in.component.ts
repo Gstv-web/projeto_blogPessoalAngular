@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class SignInComponent implements OnInit {
 
-  user: Usuario= new Usuario;
+  user: Usuario = new Usuario;
   confirmSenha: string;
   type: string;
 
