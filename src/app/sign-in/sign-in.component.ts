@@ -40,8 +40,8 @@ export class SignInComponent implements OnInit {
     } else {
       this.authService.cadastrar(this.user).subscribe((resp: Usuario) => {
         this.user = resp;
-        this.router.navigate(["/login"]);
         alert("Usuário cadastrado com sucesso!");
+        this.router.navigate(["/login"]);
       });
     }
 
