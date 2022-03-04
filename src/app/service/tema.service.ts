@@ -16,12 +16,13 @@ export class TemaService {
   }
 
   getAllTemas(): Observable<Temas[]> {
-    return this.http.get<Temas[]>("https://projetoblogpessoalgstv.herokuapp.com/temas/todos", this.token)
+    return this.http.get<Temas[]>("https://projetoblogpessoalgstv.herokuapp.com/temas/todos", this.token);
   }
 
   getById(id: number): Observable<Temas> {
     return this.http.get<Temas>(`https://projetoblogpessoalgstv.herokuapp.com/temas/${id}`, this.token);
   }
+  
   postTema(tema: Temas): Observable<Temas> {
     return this.http.post<Temas>("https://projetoblogpessoalgstv.herokuapp.com/temas/save", tema, this.token);
   }
